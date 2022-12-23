@@ -47,6 +47,10 @@ spec:
       {{- if .Values.sentry.ingestConsumer.affinity }}
 {{ toYaml .Values.sentry.ingestConsumer.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.ingestConsumer.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.ingestConsumer.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.ingestConsumer.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.ingestConsumer.nodeSelector | indent 8 }}

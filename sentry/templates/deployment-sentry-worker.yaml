@@ -38,6 +38,10 @@ spec:
       {{- if .Values.sentry.worker.affinity }}
 {{ toYaml .Values.sentry.worker.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.worker.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.worker.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.worker.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.worker.nodeSelector | indent 8 }}

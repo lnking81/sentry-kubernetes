@@ -45,6 +45,10 @@ spec:
       {{- if .Values.sentry.subscriptionConsumerTransactions.affinity }}
 {{ toYaml .Values.sentry.subscriptionConsumerTransactions.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.subscriptionConsumerTransactions.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.subscriptionConsumerTransactions.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.subscriptionConsumerTransactions.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.subscriptionConsumerTransactions.nodeSelector | indent 8 }}

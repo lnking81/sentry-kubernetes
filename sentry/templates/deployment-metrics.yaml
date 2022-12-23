@@ -34,6 +34,10 @@ spec:
       affinity:
 {{ toYaml .Values.metrics.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.metrics.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.metrics.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.metrics.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.metrics.nodeSelector | indent 8 }}

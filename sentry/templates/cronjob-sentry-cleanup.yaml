@@ -39,6 +39,10 @@ spec:
             {{- if .Values.sentry.cleanup.affinity }}
 {{ toYaml .Values.sentry.cleanup.affinity | indent 12 }}
             {{- end }}
+            {{- if .Values.sentry.cleanup.topologySpreadConstraints }}
+          topologySpreadConstraints:
+{{ toYaml .Values.sentry.cleanup.topologySpreadConstraints | indent 12 }}
+            {{- end }}
             {{- if .Values.sentry.cleanup.nodeSelector }}
           nodeSelector:
 {{ toYaml .Values.sentry.cleanup.nodeSelector | indent 12 }}

@@ -36,6 +36,10 @@ spec:
       {{- if .Values.sentry.cron.affinity }}
 {{ toYaml .Values.sentry.cron.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.cron.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.cron.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.cron.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.cron.nodeSelector | indent 8 }}

@@ -61,6 +61,7 @@ relay:
   probeTimeoutSeconds: 2
   resources: {}
   affinity: {}
+  topologySpreadConstraints: {}
   nodeSelector: {}
   securityContext: {}
   service:
@@ -105,6 +106,7 @@ sentry:
     probeTimeoutSeconds: 2
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     service:
@@ -135,6 +137,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     # tolerations: []
     # podLabels: []
@@ -161,6 +164,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -187,6 +191,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -213,6 +218,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -239,6 +245,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -264,6 +271,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     # tolerations: []
     # podLabels: []
@@ -276,6 +284,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -291,6 +300,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -306,6 +316,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -320,6 +331,7 @@ sentry:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -359,6 +371,7 @@ snuba:
       timeoutSeconds: 2
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     service:
@@ -380,6 +393,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -407,6 +421,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -434,6 +449,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -451,6 +467,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -464,6 +481,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -477,6 +495,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -504,6 +523,7 @@ snuba:
     env: []
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -580,6 +600,7 @@ hooks:
         cpu: 100m
         memory: 64Mi
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -598,6 +619,7 @@ hooks:
     sidecars: []
     volumes: []
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     # tolerations: []
     # volumes: []
@@ -613,6 +635,7 @@ hooks:
         cpu: 700m
         memory: 1Gi
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     # tolerations: []
     # volumes: []
@@ -653,6 +676,7 @@ symbolicator:
     probeInitialDelaySeconds: 10
     resources: {}
     affinity: {}
+    topologySpreadConstraints: {}
     nodeSelector: {}
     securityContext: {}
     # tolerations: []
@@ -696,6 +720,7 @@ symbolicator:
     enabled: false
     # podLabels: []
     # affinity: {}
+    # topologySpreadConstraints: {}
     # env: []
 
 auth:
@@ -1120,6 +1145,7 @@ metrics:
   nodeSelector: {}
   tolerations: []
   affinity: {}
+  topologySpreadConstraints: {}
   securityContext: {}
   # schedulerName:
   # Optional extra labels for pod, i.e. redis-client: "true"

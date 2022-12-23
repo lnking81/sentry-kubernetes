@@ -45,6 +45,10 @@ spec:
       {{- if .Values.sentry.postProcessForwardTransactions.affinity }}
 {{ toYaml .Values.sentry.postProcessForwardTransactions.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.postProcessForwardTransactions.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.postProcessForwardTransactions.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.postProcessForwardTransactions.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.postProcessForwardTransactions.nodeSelector | indent 8 }}

@@ -38,6 +38,10 @@ spec:
             {{- if .Values.snuba.cleanupErrors.affinity }}
 {{ toYaml .Values.snuba.cleanupErrors.affinity | indent 12 }}
             {{- end }}
+            {{- if .Values.snuba.cleanupErrors.topologySpreadConstraints }}
+          topologySpreadConstraints:
+{{ toYaml .Values.snuba.cleanupErrors.topologySpreadConstraints | indent 12 }}
+            {{- end }}
             {{- if .Values.snuba.cleanupErrors.nodeSelector }}
           nodeSelector:
 {{ toYaml .Values.snuba.cleanupErrors.nodeSelector | indent 12 }}

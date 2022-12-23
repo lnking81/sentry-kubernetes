@@ -44,6 +44,10 @@ spec:
       {{- if .Values.snuba.subscriptionConsumerTransactions.affinity }}
 {{ toYaml .Values.snuba.subscriptionConsumerTransactions.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.snuba.subscriptionConsumerTransactions.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.snuba.subscriptionConsumerTransactions.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.snuba.subscriptionConsumerTransactions.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.snuba.subscriptionConsumerTransactions.nodeSelector | indent 8 }}

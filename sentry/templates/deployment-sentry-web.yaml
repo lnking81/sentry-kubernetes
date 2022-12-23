@@ -40,6 +40,10 @@ spec:
       {{- if .Values.sentry.web.affinity }}
 {{ toYaml .Values.sentry.web.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.web.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.web.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.web.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.web.nodeSelector | indent 8 }}

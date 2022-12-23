@@ -45,6 +45,10 @@ spec:
       affinity:
 {{ toYaml .Values.hooks.snubaInit.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.hooks.snubaInit.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.hooks.snubaInit.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.hooks.snubaInit.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.hooks.snubaInit.nodeSelector | indent 8 }}

@@ -47,6 +47,10 @@ spec:
       {{- if .Values.sentry.billingMetricsConsumer.affinity }}
 {{ toYaml .Values.sentry.billingMetricsConsumer.affinity | indent 8 }}
       {{- end }}
+      {{- if .Values.sentry.billingMetricsConsumer.topologySpreadConstraints }}
+      topologySpreadConstraints:
+{{ toYaml .Values.sentry.billingMetricsConsumer.topologySpreadConstraints | indent 8 }}
+      {{- end }}
       {{- if .Values.sentry.billingMetricsConsumer.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.sentry.billingMetricsConsumer.nodeSelector | indent 8 }}
