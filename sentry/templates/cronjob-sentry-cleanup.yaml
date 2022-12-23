@@ -35,8 +35,8 @@ spec:
 {{ toYaml .Values.sentry.cleanup.podLabels | indent 12 }}
             {{- end }}
         spec:
-          affinity:
             {{- if .Values.sentry.cleanup.affinity }}
+          affinity:
 {{ toYaml .Values.sentry.cleanup.affinity | indent 12 }}
             {{- end }}
             {{- if .Values.sentry.cleanup.topologySpreadConstraints }}

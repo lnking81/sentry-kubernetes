@@ -33,8 +33,8 @@ spec:
 {{ toYaml .Values.snuba.api.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.snuba.api.affinity }}
+      affinity:
 {{ toYaml .Values.snuba.api.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.snuba.api.topologySpreadConstraints }}

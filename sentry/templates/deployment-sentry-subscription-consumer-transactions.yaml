@@ -41,8 +41,8 @@ spec:
 {{ toYaml .Values.sentry.subscriptionConsumerTransactions.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.subscriptionConsumerTransactions.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.subscriptionConsumerTransactions.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.subscriptionConsumerTransactions.topologySpreadConstraints }}

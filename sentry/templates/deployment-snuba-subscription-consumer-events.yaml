@@ -40,8 +40,8 @@ spec:
 {{ toYaml .Values.snuba.subscriptionConsumerEvents.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.snuba.subscriptionConsumerEvents.affinity }}
+      affinity:
 {{ toYaml .Values.snuba.subscriptionConsumerEvents.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.snuba.subscriptionConsumerEvents.topologySpreadConstraints }}

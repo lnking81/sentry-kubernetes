@@ -42,8 +42,8 @@ spec:
 {{ toYaml .Values.relay.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.relay.affinity }}
+      affinity:
 {{ toYaml .Values.relay.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.relay.topologySpreadConstraints }}

@@ -43,8 +43,8 @@ spec:
 {{ toYaml .Values.sentry.ingestMetricsConsumerPerf.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.ingestMetricsConsumerPerf.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.ingestMetricsConsumerPerf.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.ingestMetricsConsumerPerf.topologySpreadConstraints }}

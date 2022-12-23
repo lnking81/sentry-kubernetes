@@ -41,8 +41,8 @@ spec:
 {{ toYaml .Values.sentry.postProcessForwardTransactions.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.postProcessForwardTransactions.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.postProcessForwardTransactions.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.postProcessForwardTransactions.topologySpreadConstraints }}

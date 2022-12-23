@@ -43,8 +43,8 @@ spec:
 {{ toYaml .Values.sentry.billingMetricsConsumer.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.billingMetricsConsumer.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.billingMetricsConsumer.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.billingMetricsConsumer.topologySpreadConstraints }}

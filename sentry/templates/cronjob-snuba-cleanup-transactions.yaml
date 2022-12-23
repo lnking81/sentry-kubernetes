@@ -34,8 +34,8 @@ spec:
 {{ toYaml .Values.snuba.cleanupTransactions.podLabels | indent 12 }}
             {{- end }}
         spec:
-          affinity:
             {{- if .Values.snuba.cleanupTransactions.affinity }}
+          affinity:
 {{ toYaml .Values.snuba.cleanupTransactions.affinity | indent 12 }}
             {{- end }}
             {{- if .Values.snuba.cleanupTransactions.topologySpreadConstraints }}

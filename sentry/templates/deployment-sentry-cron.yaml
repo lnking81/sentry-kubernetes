@@ -32,8 +32,8 @@ spec:
 {{ toYaml .Values.sentry.cron.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.cron.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.cron.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.cron.topologySpreadConstraints }}

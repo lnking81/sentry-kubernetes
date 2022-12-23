@@ -36,8 +36,8 @@ spec:
 {{ toYaml .Values.sentry.web.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.web.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.web.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.web.topologySpreadConstraints }}

@@ -34,8 +34,8 @@ spec:
 {{ toYaml .Values.sentry.worker.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.sentry.worker.affinity }}
+      affinity:
 {{ toYaml .Values.sentry.worker.affinity | indent 8 }}
       {{- end }}
       {{- if .Values.sentry.worker.topologySpreadConstraints }}

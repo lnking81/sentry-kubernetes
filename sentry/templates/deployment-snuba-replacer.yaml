@@ -40,12 +40,12 @@ spec:
 {{ toYaml .Values.snuba.replacer.podLabels | indent 8 }}
         {{- end }}
     spec:
-      affinity:
       {{- if .Values.snuba.replacer.affinity }}
+      affinity:
 {{ toYaml .Values.snuba.replacer.affinity | indent 8 }}
       {{- end }}
-      topologySpreadConstraints:
       {{- if .Values.snuba.replacer.topologySpreadConstraints }}
+      topologySpreadConstraints:
 {{ toYaml .Values.snuba.replacer.topologySpreadConstraints | indent 8 }}
       {{- end }}
       {{- if .Values.snuba.replacer.nodeSelector }}
