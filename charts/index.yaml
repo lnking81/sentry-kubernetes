@@ -3,7 +3,7 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2022-12-23T17:01:07.014961024Z"
+    created: "2022-12-23T17:08:39.36462945Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -25,7 +25,7 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 22.11.0
-    created: "2022-12-23T17:01:07.062935843Z"
+    created: "2022-12-23T17:08:39.410204755Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -72,7 +72,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2022-12-23T17:01:07.063357736Z"
+    created: "2022-12-23T17:08:39.410655049Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 57760fc8ad6d26a6cf3d28b78bfb2bdb8d80f4cce2ff1d4e527c2b2f3d1437c9
     home: https://github.com/getsentry/sentry-kubernetes
@@ -88,4 +88,4 @@ entries:
     urls:
     - https://sentry-kubernetes.github.io/charts/sentry-kubernetes-0.3.2.tgz
     version: 0.3.2
-generated: "2022-12-23T17:01:07.013217556Z"
+generated: "2022-12-23T17:08:39.362613177Z"
