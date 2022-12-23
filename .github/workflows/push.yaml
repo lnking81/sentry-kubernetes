@@ -2,7 +2,7 @@ name: Build and push Chart
 
 on:
   push:
-    branches:    
+    branches:
       - develop
 
 jobs:
@@ -49,7 +49,7 @@ jobs:
       - name: Create index file
         uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
         with:
-          command: repo index --url https://sentry-kubernetes.github.io/charts ./gh-pages/charts
+          command: repo index --url https://lnking81.github.io/sentry-kubernetes ./gh-pages/charts
 
       - name: Commit files
         run: |
